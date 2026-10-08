@@ -1,4 +1,3 @@
-# dfsdfs
 import ProductCard from "./components/ProductCard";
 import { products } from "./data/products";
 
