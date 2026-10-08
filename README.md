@@ -1,42 +1,39 @@
 # dfsdfs
-import Image from "next/image";
-
-interface ProductCardProps {
+export interface Product {
+  id: number;
   title: string;
   description: string;
   price: number;
   image: string;
 }
 
-export default function ProductCard({
-  title,
-  description,
-  price,
-  image,
-}: ProductCardProps) {
-  return (
-    <div className="bg-white rounded-3xl p-4 shadow-sm">
-      <div className="bg-slate-100 rounded-2xl p-4 flex items-center justify-center">
-        <Image
-          src={image}
-          alt={title}
-          width={200}
-          height={200}
-          className="object-contain"
-        />
-      </div>
-
-      <h3 className="mt-4 text-xl font-bold text-gray-900">{title}</h3>
-
-      <p className="mt-2 text-sm text-gray-500 leading-relaxed">
-        {description}
-      </p>
-
-      <p className="mt-2 text-sm text-gray-900">{price} ₽</p>
-
-      <button className="mt-4 bg-blue-900 text-white text-sm px-6 py-2 rounded-full">
-        В корзину
-      </button>
-    </div>
-  );
-}
+export const products: Product[] = [
+  {
+    id: 1,
+    title: "Наушники Sony WH-1000XM5",
+    description: "Беспроводные наушники с активным шумоподавлением",
+    price: 29990,
+    image: "/headphones.png",
+  },
+  {
+    id: 2,
+    title: "Смартфон Samsung Galaxy S24",
+    description: "Флагман с ярким AMOLED-экраном",
+    price: 79990,
+    image: "/phone.png",
+  },
+  {
+    id: 3,
+    title: "Ноутбук MacBook Air M3",
+    description: "Тонкий и лёгкий ноутбук для работы",
+    price: 129990,
+    image: "/laptop.png",
+  },
+  {
+    id: 4,
+    title: "Умные часы Apple Watch",
+    description: "Отслеживание активности и здоровья",
+    price: 39990,
+    image: "/watch.png",
+  },
+];
